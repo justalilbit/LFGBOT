@@ -1,0 +1,55 @@
+{
+  "name": "mrvn",
+  "version": "1.0.0",
+  "description": "NodeJS version of my Java Discord bot MRVNLFG",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "npx cross-env NODE_ENV=production node dist/index.js",
+    "watch": "nodemon",
+
+    "lint": "eslint \"./{src,src/plugins}/*.ts\"",
+    "lint-fix": "eslint --fix \"./{src,src/plugins}/*.ts\"",
+
+    "format": "prettier --write \"./{src,src/plugins}/*.ts\"",
+    "codestyle-check": "prettier --check \"./{src,src/plugins}/*.ts\"",
+
+    "build": "npm run format && npm run lint-fix && npx rimraf dist && tsc"
+  },
+  "dependencies": {
+    "@types/js-yaml": "^3.12.2",
+    "@types/node": "^13.13.2",
+    "ajv": "^6.12.2",
+    "bufferutil": "^4.0.1",
+    "cross-env": "^7.0.2",
+    "dotenv": "^8.2.0",
+    "eris": "^0.12.0",
+    "https": "^1.0.0",
+    "humanize-duration": "^3.22.0",
+    "js-yaml": "^3.13.1",
+    "knub": "^29.0.2",
+    "moment-timezone": "^0.5.28",
+    "ts-node": "^8.9.0",
+    "typescript": "^3.8.3",
+    "utf-8-validate": "^5.0.2"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.29.0",
+    "@typescript-eslint/eslint-plugin-tslint": "^2.29.0",
+    "@typescript-eslint/parser": "^2.29.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.20.2",
+    "nodemon": "^2.0.3",
+    "prettier": "^2.0.5",
+    "rimraf": "^3.0.2",
+    "tslint": "^6.1.1",
+    "typescript-eslint": "0.0.1-alpha.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DarkView/JS-MRVNLFG.git"
+  },
+  "author": "Nils Blömeke",
+  "license": "ISC"
+}
